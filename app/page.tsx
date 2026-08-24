@@ -11,16 +11,15 @@ import {
   MoveRight,
   Compass,
   Quote,
-  Sparkles,
   Trophy,
   Users,
-  GraduationCap,
-  Calendar,
+  GraduationCap
 } from 'lucide-react';
 
 const classroomImage = 'https://images.pexels.com/photos/12448839/pexels-photo-12448839.jpeg?auto=compress&cs=tinysrgb&h=650&w=940';
 const activityImage = 'https://images.pexels.com/photos/14554003/pexels-photo-14554003.jpeg?auto=compress&cs=tinysrgb&h=650&w=940';
 const creativeImage = 'https://images.pexels.com/photos/31773583/pexels-photo-31773583.jpeg?auto=compress&cs=tinysrgb&h=650&w=940';
+const schoolImage = '/trophies-school.png'
 
 const programs = [
   { number: '01', title: 'Crèche', description: 'A gentle, nurturing beginning where every little milestone is celebrated.', color: 'red', icon: HeartHandshake },
@@ -43,7 +42,6 @@ const fadeUp = {
 export default function Home() {
   return (
     <main>
-      {/* Hero */}
       <section className="hero">
         <div className="hero-shape hero-shape-one" />
         <div className="hero-shape hero-shape-two" />
@@ -56,7 +54,7 @@ export default function Home() {
           >
             <div className="eyebrow"><span /> Sound minds. Kind hearts. Bright futures.</div>
             <h1>Where every child finds their <em>spark.</em></h1>
-            <p className="hero-lede">A warm, ambitious start to school life in Ibadan. We help children discover what they can do — and give them the confidence to do it.</p>
+            <p className="hero-lede">A warm, ambitious start to school life in Ibadan. We help children discover what they can do and give them the confidence to do it.</p>
             <div className="hero-actions">
               <Link className="button button-red" href="/admissions">Explore admissions <MoveRight size={18} /></Link>
               <Link className="text-link" href="/academics">Discover our approach <ArrowUpRight size={17} /></Link>
@@ -73,7 +71,7 @@ export default function Home() {
             transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
           >
             <div className="hero-image-frame">
-              <img src={classroomImage} alt="Children learning together in a classroom" />
+              <img src={schoolImage} alt="Children learning together in a classroom" />
             </div>
             <motion.div
               className="hero-stamp"
@@ -89,7 +87,6 @@ export default function Home() {
         <div className="hero-bottom container"><span>Scroll to explore</span><span className="scroll-line" /></div>
       </section>
 
-      {/* Stats band */}
       <section className="stats-band">
         <div className="container stats-grid">
           {stats.map((stat, i) => {
@@ -112,7 +109,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Intro */}
       <section className="intro section-pad" id="about">
         <div className="container intro-grid">
           <div className="section-label">01 / Who we are</div>
@@ -136,7 +132,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Programs */}
       <section className="programs section-pad" id="learning">
         <div className="container">
           <div className="section-heading">
@@ -177,7 +172,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Feature */}
       <section className="feature section-pad" id="community">
         <div className="container feature-grid">
           <motion.div
@@ -215,7 +209,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quote */}
       <section className="quote-section">
         <motion.div
           className="container quote-inner"
@@ -230,7 +223,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* CTA band */}
       <section className="cta-band section-pad">
         <div className="container cta-inner">
           <motion.div

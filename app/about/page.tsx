@@ -8,12 +8,12 @@ import {
   Heart,
   BookOpen,
   Users,
-  Award,
   MoveRight,
   Quote,
 } from 'lucide-react';
 import PageHero from '@/components/page-hero';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 const values = [
   { icon: Heart, title: 'Care', description: 'Every child is known, valued and supported as an individual.' },
@@ -31,6 +31,8 @@ const milestones = [
 
 const leadershipImage = 'https://images.pexels.com/photos/8467277/pexels-photo-8467277.jpeg?auto=compress&cs=tinysrgb&h=650&w=940';
 const libraryImage = 'https://images.pexels.com/photos/10638213/pexels-photo-10638213.jpeg?auto=compress&cs=tinysrgb&h=650&w=940';
+const proprietress = '/trophies-school-proprietress.jpg'
+const classImage = '/classes-trophies.png'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -48,7 +50,6 @@ export default function AboutPage() {
         ctaHref="/contact"
       />
 
-      {/* Story section */}
       <section className="section-pad">
         <div className="container feature-grid">
           <motion.div
@@ -59,7 +60,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <div className="feature-main-image">
-              <img src={libraryImage} alt="Children reading together in a school library" />
+              <img src={classImage} alt="Children reading together in a school library" />
             </div>
             <div className="image-badge"><span>15+</span><small>years of<br />serving</small></div>
           </motion.div>
@@ -73,13 +74,12 @@ export default function AboutPage() {
             <div className="section-label">Our story</div>
             <h2>From a simple idea<br /><span>to a thriving school.</span></h2>
             <p>The Trophies School was founded on a simple belief: that every child deserves a strong, joyful start to their education. Located in Oke-Ibukun, Agberu, along Pipeline, Orita Merin, Elebu Road, Iddo, we have grown from a small crèche into a trusted institution offering crèche, nursery and primary education to families across Ibadan.</p>
-            <p>Our name — The Trophies — reflects our conviction that every child is a trophy in the making: full of potential, capable of great things, and worthy of the very best care and guidance we can provide.</p>
+            <p>Our name &ldquo;The Trophies&rdquo; reflects our conviction that every child is a trophy in the making: full of potential, capable of great things, and worthy of the very best care and guidance we can provide.</p>
             <Link className="text-link dark-link" href="/contact">Come and visit us <ArrowUpRight size={17} /></Link>
           </motion.div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
       <section className="mission-vision section-pad">
         <div className="container mv-grid">
           <motion.div
@@ -107,7 +107,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values */}
       <section className="section-pad" style={{ background: '#fff' }}>
         <div className="container">
           <div className="section-heading">
@@ -145,8 +144,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Headteacher's message */}
+      
       <section className="section-pad" style={{ background: 'var(--cream)' }}>
         <div className="container headteacher-grid">
           <motion.div
@@ -156,7 +154,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <img src={leadershipImage} alt="Children engaged in creative learning" />
+            <img src={proprietress} alt="Children engaged in creative learning" />
           </motion.div>
           <motion.div
             className="headteacher-copy"
@@ -170,14 +168,13 @@ export default function AboutPage() {
               &ldquo;Every child who walks through our gates carries within them the seeds of something extraordinary. Our role — and our privilege — is to help those seeds grow. We do not just teach lessons; we build confidence, character and a love of learning that lasts a lifetime.&rdquo;
             </blockquote>
             <div className="quote-source-sm">
-              <strong>The Headteacher</strong>
+              <strong>The Proprietress</strong>
               <span>The Trophies School</span>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Timeline */}
       <section className="section-pad" style={{ background: '#fff' }}>
         <div className="container">
           <div className="section-heading">
@@ -212,7 +209,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="cta-band section-pad">
         <div className="container cta-inner">
           <motion.div

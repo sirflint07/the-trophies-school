@@ -13,6 +13,7 @@ import {
 import PageHero from '@/components/page-hero';
 import ContactForm from '@/components/contact-form';
 import { useState } from 'react';
+import { Metadata } from 'next';
 
 const steps = [
   { icon: ClipboardList, title: 'Enquire', description: 'Submit an enquiry through our website or call the school office to express your interest.' },
@@ -80,7 +81,6 @@ export default function AdmissionsPage() {
         ctaHref="#process"
       />
 
-      {/* Process */}
       <section className="section-pad" id="process">
         <div className="container">
           <div className="section-heading">
@@ -119,7 +119,6 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      {/* Requirements */}
       <section className="section-pad" style={{ background: 'var(--cream)' }}>
         <div className="container requirements-grid">
           <motion.div
@@ -146,7 +145,6 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      {/* Fees */}
       <section className="section-pad" id="fees" style={{ background: '#fff' }}>
         <div className="container">
           <div className="section-heading">
@@ -188,7 +186,6 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      {/* Important dates */}
       <section className="section-pad" style={{ background: 'var(--cream)' }}>
         <div className="container">
           <div className="section-heading">
@@ -224,7 +221,6 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="section-pad" id="faq" style={{ background: '#fff' }}>
         <div className="container faq-container">
           <motion.div
@@ -253,7 +249,6 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      {/* Apply form */}
       <section className="section-pad" style={{ background: 'var(--cream)' }} id="apply">
         <div className="container contact-grid">
           <motion.div
