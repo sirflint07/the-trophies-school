@@ -2,20 +2,16 @@
 
 import { motion } from 'framer-motion';
 import {
-  ArrowUpRight,
   Check,
   FileText,
   ClipboardList,
   Calendar,
-  MoveRight,
   ChevronDown,
-  HelpCircle,
   Phone,
   MapPin,
 } from 'lucide-react';
 import PageHero from '@/components/page-hero';
 import ContactForm from '@/components/contact-form';
-import Link from 'next/link';
 import { useState } from 'react';
 
 const steps = [

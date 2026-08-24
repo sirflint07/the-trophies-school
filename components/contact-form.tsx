@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from 'react';
 import { Check, MoveRight, ArrowUpRight, AlertCircle } from 'lucide-react';
-import { supabase } from '@/lib/supabase-client';
+// import { supabase } from '@/lib/supabase-client';
 
 export default function ContactForm({ compact = false }: { compact?: boolean }) {
   const [submitted, setSubmitted] = useState(false);
@@ -24,11 +24,11 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
     };
 
     try {
-      const { error: insertError } = await supabase
-        .from('contact_submissions')
-        .insert([data]);
+      // const { error: insertError } = await supabase
+      //   .from('contact_submissions')
+      //   .insert([data]);
 
-      if (insertError) throw insertError;
+      // if (insertError) throw insertError;
       setSubmitted(true);
     } catch {
       setError('Something went wrong. Please try again or call us directly.');
