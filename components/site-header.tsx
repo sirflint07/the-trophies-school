@@ -13,6 +13,7 @@ const navItems = [
   { href: '/school-life', label: 'School Life' },
   { href: '/news', label: 'News & Events' },
   { href: '/contact', label: 'Contact' },
+  // { href: '/giving', label: 'Giving' },
 ];
 
 export default function SiteHeader() {
@@ -32,8 +33,12 @@ export default function SiteHeader() {
           <Link href="/" className="brand" aria-label="The Trophies School home">
             <img src="/trophies-logo.png" alt="The Trophies School crest" />
             <span>
-              <strong>THE TROPHIES</strong>
-              <small>SCHOOL</small>
+              <strong className='max-lg:hidden lg:visible'>THE TROPHIES</strong>
+              <small className='max-lg:hidden lg:visible'>SCHOOL</small>
+            </span>
+            <span>
+              <strong className='max-sm:visible sm:hidden'>THE TROPHIES</strong>
+              <small className='max-sm:visible sm:hidden'>SCHOOL</small>
             </span>
           </Link>
           <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Main navigation">
@@ -41,7 +46,7 @@ export default function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={pathname === item.href ? 'is-active' : ''}
+                className={pathname === item.href ? 'is-active' : 'gap-2 text-sm'}
                 onClick={() => setMenuOpen(false)}
               >
                 {item.label}

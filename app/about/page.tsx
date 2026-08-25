@@ -165,7 +165,7 @@ export default function AboutPage() {
           >
             <Quote className="quote-mark-sm" size={32} />
             <blockquote>
-              &ldquo;Every child who walks through our gates carries within them the seeds of something extraordinary. Our role — and our privilege — is to help those seeds grow. We do not just teach lessons; we build confidence, character and a love of learning that lasts a lifetime.&rdquo;
+              &ldquo;Every child who walks through our gates carries within them the seeds of something extraordinary. Our role and our privilege is to help those seeds grow. We do not just teach lessons; we build confidence, character and a love of learning that lasts a lifetime.&rdquo;
             </blockquote>
             <div className="quote-source-sm">
               <strong>The Proprietress</strong>
